@@ -11,6 +11,9 @@
 ## Topics
 
 *	bcrypt
+- module
+https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt
+http://codetheory.in/using-the-node-js-bcrypt-module-to-hash-and-safely-store-passwords/
 * salt
 * rainbow tables
 * never store plain-text passwords
@@ -21,10 +24,10 @@
 
 ## Assignment
 
-Clone down this project.  Run `npm i`.
-Start your MongoDB server by running `mongod` from the command line.
+✓Clone down this project.  Run `npm i`.
+✓Start your MongoDB server by running `mongod` from the command line.
 Implement the following routes.
-You will also need to create a `config.js` file that will house your `secret`.
+✓You will also need to create a `config.js` file that will house your `secret`.
 
 * [POST] `/signup` This route should add a new user to the `users` collection.  After creating the user return a `JWT` token to the client.
 * [POST] `/signin` This route will receive a `username` and `password` in the request body.  If the `username` and `password` combination are valid then return a `JWT` token.

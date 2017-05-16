@@ -1,6 +1,6 @@
-// import entire models folder
+// import models
 const models = require('../models');
-
+const getTokenForUser = require('../services/token');
 
   // create a new user and return a valid JWT token to the client
 const signUp = (req, res) => {
@@ -11,7 +11,7 @@ const signUp = (req, res) => {
   const user = new models.User(req.body);
   user.save((err, user) => {
     if (err) return res.send(err);
-    res.send(user);
+    res.send(getTokenForUser(user));
   });
 };
 

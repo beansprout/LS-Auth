@@ -1,4 +1,5 @@
 const models = require('../models');
+const requireAuth = require('../services/passport').requireAuth;
   // return a list of all users if the provided JWT token is valid
   // getUsers = function that returns response consisting of users
 const getUsers = (req, res) => {
@@ -10,5 +11,5 @@ const getUsers = (req, res) => {
 };
 
 module.exports = (app) => {
-  app.get('/users', getUsers);
+  app.get('/users', requireAuth, getUsers);
 };
